@@ -22,10 +22,11 @@ body {
 }
 .upper_site {
 	display: flex;
-	margin-left: 20px;
+	margin: 0 20px;
 	padding-top: 10px;
 	align-items: center;
 	margin-bottom: 10px;
+	justify-content: space-between;
 	.logo {
 		border-radius: 30px;
 		display: flex;
@@ -41,7 +42,7 @@ body {
 	}
 	.header {
 		&_name {
-			margin-left: 20px;
+			// margin-left: 20px;
 			.name {
 				font-weight: 600;
 			}
@@ -52,12 +53,12 @@ body {
 		}
 		&_text {
 			font-size: 13px;
-			margin-left: 50px;
+			// margin-left: 50px;
 		}
 		&_icons {
 			display: flex;
 			gap: 20px;
-			margin-left: 100px;
+			// margin-left: 100px;
 			a:hover svg {
 				fill: url(#paint1_linear_2050_516);
 			}
@@ -69,7 +70,7 @@ body {
 			}
 		}
 		&_tel {
-			margin-left: 95px;
+			// margin-left: 95px;
 			font-size: 24px;
 			font-weight: 800;
 			background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
@@ -78,7 +79,7 @@ body {
 			background-clip: text;
 		}
 		&_button {
-			margin-left: 38px;
+			// margin-left: 38px;
 			button {
 				border-radius: 20px;
 				background: linear-gradient(57.53deg, rgb(25, 39, 56) -7.406%, rgb(36, 88, 142) 90.722%);

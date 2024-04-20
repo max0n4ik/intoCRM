@@ -25,10 +25,11 @@ body {
 
 .upper_site {
   display: flex;
-  margin-left: 20px;
+  margin: 0 20px;
   padding-top: 10px;
   align-items: center;
   margin-bottom: 10px;
+  justify-content: space-between;
 }
 .upper_site .logo {
   border-radius: 30px;
@@ -43,9 +44,6 @@ body {
   width: 43px;
   height: 50px;
 }
-.upper_site .header_name {
-  margin-left: 20px;
-}
 .upper_site .header_name .name {
   font-weight: 600;
 }
@@ -55,12 +53,10 @@ body {
 }
 .upper_site .header_text {
   font-size: 13px;
-  margin-left: 50px;
 }
 .upper_site .header_icons {
   display: flex;
   gap: 20px;
-  margin-left: 100px;
 }
 .upper_site .header_icons a:hover svg {
   fill: url(#paint1_linear_2050_516);
@@ -72,16 +68,12 @@ body {
   fill: url(#paint1_linear_2050_516);
 }
 .upper_site .header_tel {
-  margin-left: 95px;
   font-size: 24px;
   font-weight: 800;
   background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-.upper_site .header_button {
-  margin-left: 38px;
 }
 .upper_site .header_button button {
   border-radius: 20px;
