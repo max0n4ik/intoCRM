@@ -1,3 +1,10 @@
+@font-face {
+	font-family: "bion-bold";
+	src: url("/assets/bion-bold.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+
 .blur-bg {
 	backdrop-filter: blur(20.8px);
 	-webkit-backdrop-filter: blur(20.8px);
@@ -51,6 +58,15 @@ body {
 			display: flex;
 			gap: 20px;
 			margin-left: 100px;
+			a:hover svg {
+				fill: url(#paint1_linear_2050_516);
+			}
+			a:hover svg path {
+				fill: white;
+			}
+			a:hover svg path[id="triangle"] {
+				fill: url(#paint1_linear_2050_516);
+			}
 		}
 		&_tel {
 			margin-left: 95px;
@@ -74,6 +90,59 @@ body {
 		}
 	}
 }
+.hero {
+	width: 100%;
+	height: 387px;
+	border-radius: 30px;
+	transform: translateZ(0px);
+	margin-top: 100vh;
+	margin-bottom: 100vh;
+	box-shadow:
+		0px 4px 25.8px 0px rgba(0, 0, 0, 0.1),
+		inset -50px 4px 50px 0px rgba(255, 255, 255, 0.69);
+	backdrop-filter: blur(60px);
+	background: rgba(255, 255, 255, 0.8);
+	background-image: url(assets/image\ 17.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	&_title {
+		margin-top: 30px;
+		margin-left: 100px;
+		font-family: "bion-bold";
+		background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin-bottom: 23px;
+		.first_row {
+			font-size: 36px;
+		}
+		.second_row {
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+	}
+
+	&_text {
+		margin-left: 100px;
+		font-family: "Raleway", sans-serif;
+		max-width: 670px;
+	}
+
+	&_button {
+		margin-left: 100px;
+		margin-top: 55px;
+		button {
+			border-radius: 30px;
+			background: linear-gradient(57.53deg, rgb(25, 39, 56) -7.406%, rgb(36, 88, 142) 90.722%);
+			color: white;
+			text-transform: uppercase;
+			border: none;
+			padding: 19px 120px;
+		}
+	}
+}
+
 .services {
 	margin-left: 20px;
 	background: rgba(255, 255, 255, 0.5);
@@ -132,15 +201,7 @@ body {
 	position: fixed;
 	inset: 0;
 }
-.first {
-	width: 100%;
-	height: 400px;
-	background-color: beige;
-	border-radius: 30px;
-	transform: translateZ(0px);
-	margin-top: 100vh;
-	margin-bottom: 100vh;
-}
+
 .paralax::-webkit-scrollbar {
 	display: none;
 }
