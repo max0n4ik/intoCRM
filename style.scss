@@ -39,7 +39,7 @@ body {
 
 .header-block {
 	box-shadow: 0px 4px 25.8px 0px rgba(0, 0, 0, 0.1);
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 header {
 	position: fixed;
@@ -76,6 +76,19 @@ header {
 		align-items: center;
 		gap: 20px;
 	}
+	#city {
+		background: transparent;
+		border: none;
+		color: #000;
+		width: fit-content;
+		padding: 0;
+		cursor: pointer;
+		option {
+			color: #000;
+			padding: 0;
+		}
+	}
+
 	.tel-button {
 		display: flex;
 		align-items: center;
@@ -83,6 +96,11 @@ header {
 	}
 	.header {
 		&_name {
+			svg {
+				position: relative;
+				left: -15px;
+				pointer-events: none;
+			}
 			// margin-left: 20px;
 			.name {
 				cursor: default;
@@ -172,7 +190,7 @@ header {
 	background-repeat: no-repeat;
 	background-position: right;
 	padding: 30px 30px 30px 100px;
-	margin-bottom: 20px;
+	margin-bottom: 80px;
 	&_title {
 		font-family: "bion-bold";
 		background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
@@ -206,7 +224,6 @@ header {
 		}
 	}
 }
-
 .services {
 	width: 100%;
 	border-radius: 30px;
@@ -219,9 +236,9 @@ header {
 	margin-bottom: 20px;
 }
 .serv_grid {
-	display: flex;
+	display: grid;
 	gap: 20px;
-	flex-direction: column;
+	grid-template-columns: repeat(10, 1fr);
 	.serv_down {
 		display: grid;
 		justify-content: space-between;
@@ -235,19 +252,286 @@ header {
 		grid-template-columns: auto 2fr 2fr auto;
 	}
 	.serv_elements {
+		position: relative;
+		grid-column: span 3;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background: gray;
+		background: lightgray;
 		border-radius: 20px;
 		font-size: 20px;
 		font-family: "Bion", sans-serif;
 		padding: 20px 20px;
 		justify-content: center;
 		text-align: end;
-		img {
+		overflow: hidden;
+		text-align: center;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 10px; /* Размер краев сверху и снизу */
+			background-image: linear-gradient(
+				57.53deg,
+				rgb(25, 39, 56),
+				rgb(36, 88, 142)
+			); /* Цвет краев сверху и снизу */
+		}
+
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		&:nth-child(4) {
+			grid-column: span 2;
+		}
+		&:nth-child(1) {
+			grid-column: span 2;
+		}
+		&:nth-child(6) {
+			grid-column: span 4;
+		}
+		svg {
 			margin: auto 0;
 			width: 110px;
 		}
+		.serv_text {
+			margin-top: 10px;
+			display: none;
+			text-align: left;
+			font-family: "Raleway", sans-serif;
+			font-size: 14px;
+		}
+		&:hover {
+			display: block;
+			color: white;
+			background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
+			transition: background 0.5s;
+			svg {
+				width: 30px;
+				height: 30px;
+				margin: 0;
+			}
+			svg path {
+				fill: white;
+			}
+		}
+		&:hover .serv_text {
+			display: block;
+			color: white;
+		}
+	}
+}
+
+.benefit {
+	width: 100%;
+	border-radius: 30px;
+	box-shadow:
+		0px 4px 25.8px 0px rgba(0, 0, 0, 0.1),
+		inset -50px 4px 50px 0px rgba(255, 255, 255, 0.69);
+	backdrop-filter: blur(60px);
+	background: rgba(255, 255, 255, 0.8);
+	padding: 50px 110px 75px 110px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+
+	&_header {
+		font-size: 36px;
+		background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		font-family: "Bion", sans-serif;
+		margin-bottom: 30px;
+	}
+
+	&_text {
+		font-size: 14px;
+		font-family: "Raleway", sans-serif;
+		color: #000;
+		width: 500px;
+		margin-bottom: 23px;
+	}
+
+	&_button {
+		button {
+			border-radius: 30px;
+			background: linear-gradient(57.53deg, rgb(25, 39, 56) -7.406%, rgb(36, 88, 142) 90.722%);
+			color: white;
+			text-transform: uppercase;
+			border: none;
+			padding: 19px 120px;
+		}
+	}
+
+	&_card {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: lightgray;
+		flex-direction: column;
+		font-family: "Bion", sans-serif;
+		padding: 15px;
+		border-radius: 20px;
+		overflow: hidden;
+		&:nth-child(1) {
+			grid-column: span 3;
+		}
+		&:nth-child(4) {
+			grid-column: span 3;
+		}
+		&:nth-child(3) {
+			grid-column: span 2;
+		}
+		&:nth-child(2) {
+			grid-column: span 2;
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 10px; /* Размер краев сверху и снизу */
+			background-image: linear-gradient(
+				57.53deg,
+				rgb(25, 39, 56),
+				rgb(36, 88, 142)
+			); /* Цвет краев сверху и снизу */
+		}
+
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
+	.left_side {
+	}
+	.right_side {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		row-gap: 20px;
+		column-gap: 12px;
+		grid-template-rows: 1fr 1fr;
+	}
+	.big_text {
+		font-size: 96px;
+		background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	.small_text {
+		font-size: 14px;
+		background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+}
+
+footer {
+	color: #fff;
+	display: flex;
+	background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
+}
+
+.footer {
+	font-family: "Bion", sans-serif;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0;
+	width: 100%;
+	.logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		div {
+			display: inline-block;
+			position: relative;
+			width: 150px; /* Ширина контейнера */
+			height: 150px; /* Высота контейнера */
+			border-radius: 50%; /* Делаем контейнер круглым */
+			overflow: hidden; /* Обрезаем изображение по границам контейнера */
+			background-color: white;
+		}
+
+		div img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%); /* Центрируем изображение */
+			max-width: 100%; /* Устанавливаем максимальную ширину изображения */
+			max-height: 100%; /* Устанавливаем максимальную высоту изображения */
+		}
+	}
+	.up_side {
+		display: flex;
+		gap: 20px;
+	}
+	.down_side {
+		margin-top: 130px;
+		P {
+			font-size: 20px;
+		}
+	}
+	&_link {
+		display: flex;
+		color: white;
+		justify-content: space-between;
+		width: 70%;
+	}
+
+	&_column {
+		display: flex;
+		font-family: "Raleway", sans-serif;
+
+		flex-direction: column;
+		p {
+			margin-bottom: 10px;
+			font-weight: 800;
+			font-size: 16px;
+		}
+		a {
+			font-size: 14px;
+			color: white;
+		}
+		li {
+			margin-bottom: 7px;
+		}
+	}
+
+	&_bold {
+		font-weight: 700;
+	}
+
+	&_contact {
+	}
+
+	&_tel {
+		a {
+			font-size: 24px;
+			color: white;
+		}
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+
+	&_adr {
+		font-size: 14px;
 	}
 }
