@@ -15,10 +15,11 @@
 
 .container-header {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1380px;
   margin: 0 auto;
   padding: 0;
-  position: relative;
+  position: fixed;
+  z-index: 999;
 }
 
 .blur-bg {
@@ -41,14 +42,10 @@ body {
 
 .header-block {
   box-shadow: 0px 4px 25.8px 0px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
+section {
+  margin-bottom: 70px;
 }
 
 .header {
@@ -85,24 +82,21 @@ header {
   background: transparent;
   border: none;
   color: #000;
-  width: -moz-fit-content;
-  width: fit-content;
   padding: 0;
   cursor: pointer;
+  margin-left: -4 px;
 }
 .upper_site #city option {
   color: #000;
-  padding: 0;
 }
 .upper_site .tel-button {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-.upper_site .header_name svg {
-  position: relative;
-  left: -15px;
-  pointer-events: none;
+.upper_site .header_name {
+  display: flex;
+  flex-direction: column;
 }
 .upper_site .header_name .name {
   cursor: default;
@@ -140,7 +134,7 @@ header {
 }
 .upper_site .header_button button {
   border-radius: 20px;
-  background: linear-gradient(57.53deg, rgb(25, 39, 56) -7.406%, rgb(36, 88, 142) 90.722%);
+  background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
   color: white;
   text-transform: uppercase;
   border: none;
@@ -148,7 +142,6 @@ header {
 }
 
 .nav-services {
-  margin-left: 20px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 0px 0px 30px 30px;
   display: flex;
@@ -203,13 +196,20 @@ header {
 .hero_text {
   font-family: "Raleway", sans-serif;
   max-width: 670px;
+  line-height: 25px;
+}
+.hero_text span {
+  color: white;
+  padding: 5px 10px;
+  background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
+  border-radius: 20px;
 }
 .hero_button {
   margin-top: 55px;
 }
 .hero_button button {
   border-radius: 30px;
-  background: linear-gradient(57.53deg, rgb(25, 39, 56) -7.406%, rgb(36, 88, 142) 90.722%);
+  background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
   color: white;
   text-transform: uppercase;
   border: none;
@@ -224,7 +224,6 @@ header {
           backdrop-filter: blur(60px);
   background: rgba(255, 255, 255, 0.8);
   padding: 50px 110px 75px 110px;
-  margin-bottom: 20px;
 }
 
 .serv_grid {
@@ -250,15 +249,14 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: lightgray;
+  background: rgb(236, 236, 236);
   border-radius: 20px;
-  font-size: 20px;
-  font-family: "Bion", sans-serif;
   padding: 20px 20px;
   justify-content: center;
   text-align: end;
   overflow: hidden;
   text-align: center;
+  height: 200px;
 }
 .serv_grid .serv_elements::before, .serv_grid .serv_elements::after {
   content: "";
@@ -267,6 +265,11 @@ header {
   right: 0;
   height: 10px; /* Размер краев сверху и снизу */
   background-image: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142)); /* Цвет краев сверху и снизу */
+}
+.serv_grid .serv_elements p {
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: "Bion", sans-serif;
 }
 .serv_grid .serv_elements::before {
   top: 0;
@@ -292,25 +295,33 @@ header {
   display: none;
   text-align: left;
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 .serv_grid .serv_elements:hover {
-  display: block;
+  display: flex;
   color: white;
   background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
-  transition: background 0.5s;
+  flex-direction: column;
 }
 .serv_grid .serv_elements:hover svg {
+  position: relative;
   width: 30px;
   height: 30px;
   margin: 0;
+  order: 2;
 }
 .serv_grid .serv_elements:hover svg path {
   fill: white;
 }
+.serv_grid .serv_elements:hover div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 .serv_grid .serv_elements:hover .serv_text {
   display: block;
   color: white;
+  margin: auto 0;
 }
 
 .benefit {
@@ -321,9 +332,9 @@ header {
           backdrop-filter: blur(60px);
   background: rgba(255, 255, 255, 0.8);
   padding: 50px 110px 75px 110px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .benefit_header {
   font-size: 36px;
@@ -343,7 +354,7 @@ header {
 }
 .benefit_button button {
   border-radius: 30px;
-  background: linear-gradient(57.53deg, rgb(25, 39, 56) -7.406%, rgb(36, 88, 142) 90.722%);
+  background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
   color: white;
   text-transform: uppercase;
   border: none;
@@ -354,7 +365,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: lightgray;
+  background: rgb(236, 236, 236);
   flex-direction: column;
   font-family: "Bion", sans-serif;
   padding: 15px;
@@ -394,6 +405,7 @@ header {
   -moz-column-gap: 12px;
        column-gap: 12px;
   grid-template-rows: 1fr 1fr;
+  width: 50%;
 }
 .benefit .big_text {
   font-size: 96px;
@@ -404,10 +416,8 @@ header {
 }
 .benefit .small_text {
   font-size: 14px;
-  background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 footer {
@@ -423,6 +433,7 @@ footer {
   flex-direction: column;
   padding: 20px 0;
   width: 100%;
+  margin-top: 100px;
 }
 .footer .logo {
   display: flex;
@@ -431,26 +442,10 @@ footer {
   flex-direction: column;
   text-align: center;
 }
-.footer .logo div {
-  display: inline-block;
-  position: relative;
-  width: 150px; /* Ширина контейнера */
-  height: 150px; /* Высота контейнера */
-  border-radius: 50%; /* Делаем контейнер круглым */
-  overflow: hidden; /* Обрезаем изображение по границам контейнера */
-  background-color: white;
-}
-.footer .logo div img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Центрируем изображение */
-  max-width: 100%; /* Устанавливаем максимальную ширину изображения */
-  max-height: 100%; /* Устанавливаем максимальную высоту изображения */
-}
 .footer .up_side {
   display: flex;
   gap: 20px;
+  height: 160px;
 }
 .footer .down_side {
   margin-top: 130px;
@@ -490,11 +485,29 @@ footer {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  gap: 20px;
 }
 .footer_tel a {
   font-size: 24px;
   color: white;
 }
 .footer_adr {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   font-size: 14px;
+}
+
+.paralax {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1px;
+}
+.paralax svg {
+  transform: translateZ(-3px) scale(3);
+  position: absolute;
+  margin: 0 auto;
 }
