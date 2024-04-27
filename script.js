@@ -1,49 +1,53 @@
-document.addEventListener('DOMContentLoaded', () => {
 
-    'use strict';
+gsap.registerPlugin(ScrollTrigger);
 
-    var typed = new Typed('.second_row', {
+
+ScrollTrigger.create({
+    trigger: ".hero",
+    duration: 1,
+    start: "top center", // Начало анимации при достижении этой точки
+    end: "+=100",
+    once: true,
+    onEnter: () => new Typed('.second_row', {
         strings: ['просто, ^800 удобно, ^500 эффективно'],
         typeSpeed: 60,
-    });
+    }),
+});
 
+gsap.to(".paralax", {
+    yPercent: 75,
+    scale: 1.2,
+    once: true,
+    scrollTrigger: {
+        trigger: ".hero",
+        start: "top bottom", // the default values
+        end: "bottom top",
+        pin: "#red-content",
+        markers: true,
+        scrub: true
 
-
-    gsap.registerPlugin(ScrollTrigger);
-
-
-    gsap.to(".paralax", {
-        yPercent: 75,
-        scale: 1.2,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".hero",
-            start: "top bottom", // the default values
-            end: "bottom top",
-            pin: "#red-content",
-            markers: true,
-            scrub: true
-
-        },
-    });
-
-    // gsap.to(".b", {
-    //     x: 400,
-    //     rotation: 360,
-    //     scrollTrigger: {
-    //         trigger: ".b",
-    //         start: "top center",
-    //         end: "top 100px",
-    //         scrub: true,
-    //         markers: true,
-    //         id: "scrub"
-    //     }
-    // });
-
-
-
-
-
+    },
 });
 
 
+
+
+const items = document.querySelectorAll(".big_text");
+
+gsap.from(items, {
+    textContent: 0,
+    duration: 4,
+    ease: "power1.in",
+    snap: { textContent: 1 },
+    stagger: {
+        each: 1.0,
+        onUpdate: function () {
+            this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
+        },
+    }
+});
+
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
