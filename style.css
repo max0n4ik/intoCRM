@@ -376,6 +376,9 @@ section {
 .benefit_card:nth-child(1) {
   grid-column: span 3;
 }
+.benefit_card:nth-child(1) span {
+  font-size: 96px !important;
+}
 .benefit_card:nth-child(4) {
   grid-column: span 3;
 }
@@ -409,19 +412,18 @@ section {
   width: 50%;
 }
 .benefit .big_text {
-  font-size: 96px;
+  font-size: 56px;
   background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   line-height: normal;
   text-align: center;
 }
 .benefit .big_text span {
-  margin: auto 0;
-  font-size: 56px;
+  font-size: 96px;
 }
 .benefit .small_text {
   font-size: 14px;
