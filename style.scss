@@ -406,6 +406,9 @@ section {
 		height: 200px;
 		&:nth-child(1) {
 			grid-column: span 3;
+			span {
+				font-size: 96px !important;
+			}
 		}
 		&:nth-child(4) {
 			grid-column: span 3;
@@ -443,18 +446,17 @@ section {
 		width: 50%;
 	}
 	.big_text {
-		font-size: 96px;
+		font-size: 56px;
 		background: $primary-color;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		line-height: normal;
 		text-align: center;
 		span {
-			margin: auto 0;
-			font-size: 56px;
+			font-size: 96px;
 		}
 	}
 	.small_text {

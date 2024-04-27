@@ -1,7 +1,6 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 ScrollTrigger.create({
     trigger: ".hero",
     duration: 1,
@@ -22,32 +21,24 @@ gsap.to(".paralax", {
         trigger: ".hero",
         start: "top bottom", // the default values
         end: "bottom top",
-        pin: "#red-content",
         markers: true,
         scrub: true
-
     },
 });
 
 
-
-
-const items = document.querySelectorAll(".big_text");
+const items = document.querySelectorAll(".big_text span");
 
 gsap.from(items, {
     textContent: 0,
     duration: 4,
-    ease: "power1.in",
+    ease: Power1.easeIn,
+    scrollTrigger: {
+        trigger: ".benefit",
+        start: "top center", // Начало анимации при достижении этой точки
+        end: "+=100",
+        markers: true
+    },
     snap: { textContent: 1 },
-    stagger: {
-        each: 1.0,
-        onUpdate: function () {
-            this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
-        },
-    }
+    stagger: 1,
 });
-
-
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
