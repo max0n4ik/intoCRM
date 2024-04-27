@@ -293,7 +293,7 @@ section {
 		p {
 			margin-top: 5px;
 			font-size: 20px;
-			font-family: "Bion", sans-serif;
+			font-family: "bion-bold";
 		}
 
 		&::before {
@@ -369,7 +369,7 @@ section {
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
-		font-family: "Bion", sans-serif;
+		font-family: "bion-bold";
 		margin-bottom: 30px;
 	}
 
@@ -399,10 +399,11 @@ section {
 		align-items: center;
 		background: $element-color-light;
 		flex-direction: column;
-		font-family: "Bion", sans-serif;
+		font-family: "bion-bold";
 		padding: 15px;
 		border-radius: 20px;
 		overflow: hidden;
+		height: 200px;
 		&:nth-child(1) {
 			grid-column: span 3;
 		}
@@ -447,6 +448,14 @@ section {
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
+		display: flex;
+		align-items: flex-end;
+		line-height: normal;
+		text-align: center;
+		span {
+			margin: auto 0;
+			font-size: 56px;
+		}
 	}
 	.small_text {
 		font-size: 14px;

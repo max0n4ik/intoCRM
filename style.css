@@ -269,7 +269,7 @@ section {
 .serv_grid .serv_elements p {
   margin-top: 5px;
   font-size: 20px;
-  font-family: "Bion", sans-serif;
+  font-family: "bion-bold";
 }
 .serv_grid .serv_elements::before {
   top: 0;
@@ -342,7 +342,7 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-family: "Bion", sans-serif;
+  font-family: "bion-bold";
   margin-bottom: 30px;
 }
 .benefit_text {
@@ -367,10 +367,11 @@ section {
   align-items: center;
   background: rgb(236, 236, 236);
   flex-direction: column;
-  font-family: "Bion", sans-serif;
+  font-family: "bion-bold";
   padding: 15px;
   border-radius: 20px;
   overflow: hidden;
+  height: 200px;
 }
 .benefit_card:nth-child(1) {
   grid-column: span 3;
@@ -413,6 +414,14 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: flex;
+  align-items: flex-end;
+  line-height: normal;
+  text-align: center;
+}
+.benefit .big_text span {
+  margin: auto 0;
+  font-size: 56px;
 }
 .benefit .small_text {
   font-size: 14px;
