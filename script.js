@@ -1,5 +1,8 @@
 
+
 gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.clearScrollMemory('manual')
 
 ScrollTrigger.create({
     trigger: ".hero",
@@ -13,10 +16,9 @@ ScrollTrigger.create({
     }),
 });
 
-gsap.to(".paralax", {
+gsap.to("#logo", {
     yPercent: 75,
     scale: 1.2,
-    once: true,
     scrollTrigger: {
         trigger: ".hero",
         start: "top bottom", // the default values
@@ -27,12 +29,10 @@ gsap.to(".paralax", {
 });
 
 
-const items = document.querySelectorAll(".big_text span");
-
-gsap.from(items, {
+gsap.from(".number", {
     textContent: 0,
-    duration: 4,
-    ease: Power1.easeIn,
+    duration: 2,
+    ease: CustomEase.create("custom", "M0,0 C0,0 0.05,0.925 0.05,0.925 0.05,0.925 1,1 1,1 "),
     scrollTrigger: {
         trigger: ".benefit",
         start: "top center", // Начало анимации при достижении этой точки
@@ -40,5 +40,29 @@ gsap.from(items, {
         markers: true
     },
     snap: { textContent: 1 },
-    stagger: 1,
+
+});
+
+
+gsap.to(".img", {
+    x: -900,
+    scrollTrigger: {
+        trigger: ".license_overflow",
+        start: "top center", // Начало анимации при достижении этой точки
+        end: "bottom center",
+        markers: true,
+        scrub: true
+    },
+});
+
+gsap.to(".license_overflow", {
+    y: 100,
+    rotation: 10,
+    scrollTrigger: {
+        trigger: ".license",
+        start: "top center", // Начало анимации при достижении этой точки
+        end: "bottom center",
+        markers: true,
+        scrub: true
+    },
 });

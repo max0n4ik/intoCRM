@@ -141,8 +141,8 @@
 	<main>
 		<div class="container">
 			<div class="paralax">
-				<svg id="logo" width="1008" height="639" viewBox="0 0 1008 639" fill="none"
-					xmlns="http://www.w3.org/2000/svg">
+				<svg id="logo" style="transform: scale(0.9);" width="1008" height="639" viewBox="0 0 1008 639"
+					fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M64.0658 370.262V202.091H18.1679V123.739H154.905V370.262H64.0658ZM56.8942 49.209C56.8942 20.0658 77.4527 0.477783 107.573 0.477783C137.694 0.477783 158.73 20.0658 158.73 49.209C158.73 78.3522 137.694 98.418 107.573 98.418C77.4527 98.418 56.8942 78.3522 56.8942 49.209ZM197.722 370.262V123.739H243.141L268.959 151.449C288.083 129.472 316.769 117.528 350.714 117.528C416.692 117.528 460.2 161.482 460.2 229.323V370.262H369.36V237.923C369.36 210.213 354.539 193.969 329.2 193.969C303.86 193.969 288.561 210.213 288.561 237.923V370.262H197.722ZM624.107 374.562C558.129 374.562 525.618 343.507 525.618 280.921V202.091H479.72V164.826L582.512 59.7197H616.458V123.739H683.87V197.314H616.458V266.588C616.458 289.043 626.498 299.076 650.881 299.076C661.878 299.076 673.83 297.165 686.739 292.865V365.962C664.268 371.695 643.71 374.562 624.107 374.562ZM846.258 376.473C762.59 376.473 704.261 322.964 704.261 247C704.261 171.037 762.59 117.528 846.258 117.528C929.926 117.528 988.254 171.037 988.254 247C988.254 322.964 929.926 376.473 846.258 376.473ZM794.145 247C794.145 279.01 814.703 300.031 846.258 300.031C877.813 300.031 898.371 279.01 898.371 247C898.371 214.991 877.813 193.969 846.258 193.969C814.703 193.969 794.145 214.991 794.145 247Z"
 						fill="url(#paint0_linear_27_4)"></path>
@@ -419,20 +419,41 @@
 				</div>
 				<div class="right_side">
 					<div class="benefit_card">
-						<p class="big_text">+<span>220</span></p>
+						<p class="big_text"><span>+</span><span class="number">220</span></p>
 						<p class="small_text">Довольных клиентов</p>
 					</div>
 					<div class="benefit_card">
-						<p class="big_text"><span>67</span> %</p>
+						<p class="big_text"><span class="number">67</span> <span>%</span></p>
 						<p class="small_text">Клиентов рекомендуют нас своим коллегам</p>
 					</div>
 					<div class="benefit_card">
-						<p class="big_text"><span>25</span> %</p>
+						<p class="big_text"><span class="number">25</span> <span>%</span></p>
 						<p class="small_text">Увеличения прибыли</p>
 					</div>
 					<div class="benefit_card">
-						<p class="big_text">X <span>2.5</span></p>
+						<p class="big_text"><span>X</span> <span class="number">2.5</span></p>
 						<p class="small_text">Компания растет ежегодно</p>
+					</div>
+				</div>
+			</section>
+			<section class="license">
+				<div class="license_text">
+					<p>Приобретайте лицензии для вашего бизнеса на выгодных условиях</p>
+				</div>
+				<div class="license_overflow">
+
+					<div class="license_card">
+						<div class="first_row">
+							<div class="img"></div>
+							<div class="img"></div>
+							<div class="img"></div>
+						</div>
+						<div class="second_row">
+							<div class="img"></div>
+							<div class="img"></div>
+							<div class="img"></div>
+						</div>
+
 					</div>
 				</div>
 			</section>
@@ -515,6 +536,7 @@
 </body>
 <script src="gsap.min.js"></script>
 <script src="ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="script.js"></script>
 

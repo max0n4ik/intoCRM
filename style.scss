@@ -281,6 +281,7 @@ section {
 		overflow: hidden;
 		text-align: center;
 		height: 200px;
+
 		&::before,
 		&::after {
 			content: "";
@@ -341,6 +342,10 @@ section {
 				width: 100%;
 				display: flex;
 				justify-content: space-between;
+			}
+			&::before,
+			&::after {
+				background: none;
 			}
 		}
 		&:hover .serv_text {
@@ -406,9 +411,6 @@ section {
 		height: 200px;
 		&:nth-child(1) {
 			grid-column: span 3;
-			span {
-				font-size: 96px !important;
-			}
 		}
 		&:nth-child(4) {
 			grid-column: span 3;
@@ -452,10 +454,13 @@ section {
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		line-height: normal;
 		text-align: center;
-		span {
+		span:not(.number) {
+			margin-bottom: 14px;
+		}
+		.number {
 			font-size: 96px;
 		}
 	}
@@ -556,9 +561,48 @@ footer {
 	align-items: center;
 	justify-content: center;
 	perspective: 1px;
+
 	svg {
-		transform: translateZ(-3px) scale(3);
 		position: absolute;
 		margin: 0 auto;
+	}
+}
+
+.license {
+	&_text {
+		display: flex;
+		p {
+			background: $primary-color;
+			background-clip: text;
+			color: transparent;
+			font-size: 36px;
+			font-family: "bion-bold";
+		}
+		margin: 20px;
+	}
+
+	&_card {
+		display: flex;
+		gap: 30px;
+		flex-direction: column;
+	}
+	.img {
+		width: 700px;
+		height: 400px;
+		background: red;
+	}
+
+	.first_row {
+		display: flex;
+		gap: 20px;
+		width: 100%;
+	}
+	.second_row {
+		gap: 20px;
+		display: flex;
+	}
+	&_overflow {
+		overflow: hidden;
+		display: flex;
 	}
 }
