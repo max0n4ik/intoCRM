@@ -318,6 +318,9 @@ section {
   display: flex;
   justify-content: space-between;
 }
+.serv_grid .serv_elements:hover::before, .serv_grid .serv_elements:hover::after {
+  background: none;
+}
 .serv_grid .serv_elements:hover .serv_text {
   display: block;
   color: white;
@@ -376,9 +379,6 @@ section {
 .benefit_card:nth-child(1) {
   grid-column: span 3;
 }
-.benefit_card:nth-child(1) span {
-  font-size: 96px !important;
-}
 .benefit_card:nth-child(4) {
   grid-column: span 3;
 }
@@ -418,11 +418,14 @@ section {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   line-height: normal;
   text-align: center;
 }
-.benefit .big_text span {
+.benefit .big_text span:not(.number) {
+  margin-bottom: 14px;
+}
+.benefit .big_text .number {
   font-size: 96px;
 }
 .benefit .small_text {
@@ -518,7 +521,42 @@ footer {
   perspective: 1px;
 }
 .paralax svg {
-  transform: translateZ(-3px) scale(3);
   position: absolute;
   margin: 0 auto;
+}
+
+.license_text {
+  display: flex;
+  margin: 20px;
+}
+.license_text p {
+  background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 36px;
+  font-family: "bion-bold";
+}
+.license_card {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.license .img {
+  width: 700px;
+  height: 400px;
+  background: red;
+}
+.license .first_row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.license .second_row {
+  gap: 20px;
+  display: flex;
+}
+.license_overflow {
+  overflow: hidden;
+  display: flex;
 }
