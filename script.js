@@ -37,32 +37,59 @@ gsap.from(".number", {
         trigger: ".benefit",
         start: "top center", // Начало анимации при достижении этой точки
         end: "+=100",
-        markers: true
     },
     snap: { textContent: 1 },
 
 });
 
 
-gsap.to(".img", {
-    x: -900,
+
+gsap.to(".license_overflow", {
+    rotationZ: 0,
+    rotationX: 0,
+    opacity: 1,
+    y: 100,
     scrollTrigger: {
-        trigger: ".license_overflow",
+        trigger: ".license",
         start: "top center", // Начало анимации при достижении этой точки
-        end: "bottom center",
+        end: "50% center",
+        scrub: true
+    },
+});
+
+gsap.to(".license_card .first_row", {
+    x: 90,
+    scrollTrigger: {
+        trigger: ".license_text",
+        start: "600px 80%", // Начало анимации при достижении этой точки
         markers: true,
         scrub: true
     },
 });
 
-gsap.to(".license_overflow", {
-    y: 100,
-    rotation: 10,
+gsap.to(".license_card .second_row", {
+    x: -300,
     scrollTrigger: {
-        trigger: ".license",
-        start: "top center", // Начало анимации при достижении этой точки
-        end: "bottom center",
-        markers: true,
+        trigger: ".license_text",
+        start: "600px 80%", // Начало анимации при достижении этой точки
         scrub: true
     },
 });
+
+// const btn = document.querySelector('.btn');
+
+// btn.addEventListener('mouseover', () => {
+//   gsap.to('.btn', {
+//     background: linear-gradient(57.53deg, #00f, #f00),
+//     duration: 0.3,
+//     ease: 'power1.inOut'
+//   });
+// });
+
+// btn.addEventListener('mouseout', () => {
+//   gsap.to('.btn', {
+//     background: linear-gradient(57.53deg, #f00, #00f),
+//     duration: 0.3,
+//     ease: 'power1.inOut'
+//   });
+// });
