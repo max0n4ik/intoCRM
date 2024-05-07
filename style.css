@@ -553,28 +553,30 @@ footer {
   display: flex;
   gap: 20px;
   width: 100%;
-  transform: translateX(-500px);
 }
 .license .first_row a {
-  width: 600px;
-  height: 300px;
+  width: 435px;
+  height: 280px;
+  border-radius: 20px;
+  background-color: white;
 }
 .license .first_row img {
-  width: 600px;
-  height: 300px;
+  width: 435px;
+  height: 280px;
 }
 .license .second_row {
   gap: 20px;
   display: flex;
 }
 .license .second_row a {
-  width: 600px;
-  height: 300px;
+  width: 210px;
+  height: 150px;
   border-radius: 30px;
+  background-color: white;
 }
 .license .second_row img {
-  width: 600px;
-  height: 300px;
+  width: 210px;
+  height: 150px;
 }
 .license_overflow {
   position: relative;
@@ -612,19 +614,18 @@ footer {
 .blog .swiper-wrapper {
   gap: 20px;
 }
-
-.button_block {
+.blog .button_block {
   display: flex;
   gap: 20px;
 }
-.button_block button {
+.blog .button_block button {
   border-radius: 18px;
   border: rgb(149, 150, 150) solid 3px;
   background: none;
   padding: 8px 64px;
   font-size: 20px;
 }
-.button_block_gradient button {
+.blog .button_block_gradient button {
   background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
   color: white;
   padding: 8px 64px;

@@ -47,26 +47,28 @@ gsap.from(".number", {
 gsap.to(".license_overflow", {
     rotationZ: 0,
     rotationX: 0,
+    rotationY: 0,
     opacity: 1,
     y: 100,
     scrollTrigger: {
         trigger: ".license",
         start: "top center", // Начало анимации при достижении этой точки
         end: "50% center",
-        scrub: true
+        scrub: true,
+        once: true,
     },
 });
 
-gsap.to(".license_card .first_row", {
-    x: 30,
-    scrollTrigger: {
-        trigger: ".license_text",
-        start: "700px 80%",
-        end: "100px", // Начало анимации при достижении этой точки
-        markers: true,
-        scrub: true
-    },
-});
+// gsap.to(".license_card .first_row", {
+//     x: 30,
+//     scrollTrigger: {
+//         trigger: ".license_text",
+//         start: "700px 80%",
+//         end: "100px", // Начало анимации при достижении этой точки
+//         markers: true,
+//         scrub: true
+//     },
+// });
 
 gsap.to(".license_card .second_row", {
     x: -450,

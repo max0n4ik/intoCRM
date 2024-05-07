@@ -596,27 +596,30 @@ footer {
 		display: flex;
 		gap: 20px;
 		width: 100%;
-		transform: translateX(-500px);
+		// transform: translateX(-500px);
 		a {
-			width: 600px;
-			height: 300px;
+			width: 435px;
+			height: 280px;
+			border-radius: 20px;
+			background-color: white;
 		}
 		img {
-			width: 600px;
-			height: 300px;
+			width: 435px;
+			height: 280px;
 		}
 	}
 	.second_row {
 		gap: 20px;
 		display: flex;
 		a {
-			width: 600px;
-			height: 300px;
+			width: 210px;
+			height: 150px;
 			border-radius: 30px;
+			background-color: white;
 		}
 		img {
-			width: 600px;
-			height: 300px;
+			width: 210px;
+			height: 150px;
 		}
 	}
 	&_overflow {
@@ -657,27 +660,27 @@ footer {
 	.swiper-wrapper {
 		gap: 20px;
 	}
-}
-.button {
-	&_block {
-		display: flex;
-		gap: 20px;
-		button {
-			border-radius: 18px;
-			border: rgb(149, 150, 150) solid 3px;
-			background: none;
-			padding: 8px 64px;
-			font-size: 20px;
+	.button {
+		&_block {
+			display: flex;
+			gap: 20px;
+			button {
+				border-radius: 18px;
+				border: rgb(149, 150, 150) solid 3px;
+				background: none;
+				padding: 8px 64px;
+				font-size: 20px;
+			}
 		}
-	}
-	&_block_gradient {
-		button {
-			background: $primary-color;
-			color: white;
-			padding: 8px 64px;
-			font-size: 20px;
-			border-radius: 18px;
-			border: none;
+		&_block_gradient {
+			button {
+				background: $primary-color;
+				color: white;
+				padding: 8px 64px;
+				font-size: 20px;
+				border-radius: 18px;
+				border: none;
+			}
 		}
 	}
 }
