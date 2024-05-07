@@ -52,6 +52,7 @@ body {
 	background-attachment: fixed;
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
+	scroll-behavior: smooth;
 }
 
 .header-block {
@@ -570,9 +571,12 @@ footer {
 
 .license {
 	margin-bottom: 170px;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
 	&_text {
 		display: flex;
-		p {
+		h2 {
 			background: $primary-color;
 			background-clip: text;
 			color: transparent;
@@ -587,21 +591,33 @@ footer {
 		gap: 30px;
 		flex-direction: column;
 	}
-	.img {
-		width: 600px;
-		height: 300px;
-		background: red;
-	}
 
 	.first_row {
 		display: flex;
 		gap: 20px;
 		width: 100%;
 		transform: translateX(-500px);
+		a {
+			width: 600px;
+			height: 300px;
+		}
+		img {
+			width: 600px;
+			height: 300px;
+		}
 	}
 	.second_row {
 		gap: 20px;
 		display: flex;
+		a {
+			width: 600px;
+			height: 300px;
+			border-radius: 30px;
+		}
+		img {
+			width: 600px;
+			height: 300px;
+		}
 	}
 	&_overflow {
 		position: relative;
@@ -610,5 +626,105 @@ footer {
 		opacity: 0.2;
 		transform: translateY(-300px) rotateX(51deg) rotateZ(23deg);
 		z-index: -1;
+	}
+}
+
+.blog {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	&_header {
+		font-size: 36px;
+		background: $primary-color;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		font-family: "bion-bold";
+		margin-bottom: 50px;
+	}
+
+	&_slider_block {
+		width: 100%;
+	}
+
+	&_button {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.swiper-wrapper {
+		gap: 20px;
+	}
+}
+.button {
+	&_block {
+		display: flex;
+		gap: 20px;
+		button {
+			border-radius: 18px;
+			border: rgb(149, 150, 150) solid 3px;
+			background: none;
+			padding: 8px 64px;
+			font-size: 20px;
+		}
+	}
+	&_block_gradient {
+		button {
+			background: $primary-color;
+			color: white;
+			padding: 8px 64px;
+			font-size: 20px;
+			border-radius: 18px;
+			border: none;
+		}
+	}
+}
+
+.slider_block {
+	background: white;
+	border-radius: 20px;
+	width: 420px;
+	.image {
+		background: rgb(204, 203, 203);
+		border-radius: 20px;
+		height: 210px;
+	}
+	.under_section {
+		display: flex;
+		justify-content: space-between;
+		font-size: 20px;
+		font-family: "bion-bold";
+		padding: 25px 10px 18px 10px;
+		align-items: center;
+		button {
+			box-shadow: 0px 4px 17.4px 0px rgba(217, 217, 217, 0.25);
+			border: none;
+			background-color: white;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+		}
+	}
+}
+.case {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.image {
+		width: 200px;
+		height: 100px;
+	}
+	.under_section {
+		padding: 9px 10px 9px 10px;
+		button {
+			width: 30px;
+			height: 30px;
+		}
+	}
+	.slider_block {
+		width: 200px;
 	}
 }

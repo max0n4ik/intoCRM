@@ -58,38 +58,31 @@ gsap.to(".license_overflow", {
 });
 
 gsap.to(".license_card .first_row", {
-    x: 90,
+    x: 30,
     scrollTrigger: {
         trigger: ".license_text",
-        start: "600px 80%", // Начало анимации при достижении этой точки
+        start: "700px 80%",
+        end: "100px", // Начало анимации при достижении этой точки
         markers: true,
         scrub: true
     },
 });
 
 gsap.to(".license_card .second_row", {
-    x: -300,
+    x: -450,
     scrollTrigger: {
         trigger: ".license_text",
-        start: "600px 80%", // Начало анимации при достижении этой точки
+        start: "700px 80%",
+        end: "100px", // Начало анимации при достижении этой точки
         scrub: true
     },
 });
 
-// const btn = document.querySelector('.btn');
 
-// btn.addEventListener('mouseover', () => {
-//   gsap.to('.btn', {
-//     background: linear-gradient(57.53deg, #00f, #f00),
-//     duration: 0.3,
-//     ease: 'power1.inOut'
-//   });
-// });
-
-// btn.addEventListener('mouseout', () => {
-//   gsap.to('.btn', {
-//     background: linear-gradient(57.53deg, #f00, #00f),
-//     duration: 0.3,
-//     ease: 'power1.inOut'
-//   });
-// });
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 3.3,
+});
+const swiper2 = new Swiper('.case>.swiper', {
+    slidesPerView: 6.3,
+    spaceBetween: 20,
+});
