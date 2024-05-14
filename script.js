@@ -81,10 +81,11 @@ gsap.to(".license_card .second_row", {
 });
 
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.blog>.swiper', {
     slidesPerView: 3.3,
 });
 const swiper2 = new Swiper('.case>.swiper', {
     slidesPerView: 6.3,
     spaceBetween: 20,
 });
+

@@ -635,9 +635,11 @@ footer {
 }
 
 .slider_block {
-  background: white;
+  box-shadow: inset -50px 4px 50px 0px rgba(255, 255, 255, 0.69);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  width: 420px;
 }
 .slider_block .image {
   background: rgb(204, 203, 203);
@@ -668,7 +670,6 @@ footer {
   flex-direction: column;
 }
 .case .image {
-  width: 200px;
   height: 100px;
 }
 .case .under_section {
@@ -679,5 +680,96 @@ footer {
   height: 30px;
 }
 .case .slider_block {
-  width: 200px;
+  width: 100%;
+}
+
+.faq_header {
+  font-size: 36px;
+  background: linear-gradient(57.53deg, rgb(25, 39, 56), rgb(36, 88, 142));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "bion-bold";
+  margin-bottom: 50px;
+}
+.faq_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.faq_grid {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.faq_button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: inset -50px 4px 50px 0px rgba(255, 255, 255, 0.69);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+}
+.faq_button::after {
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 37px;
+  height: 37px;
+  background-image: url("assets/faq_arrow.svg");
+  box-shadow: 0px 4px 17.4px 0px rgba(217, 217, 217, 0.25);
+  border-radius: 50px;
+  transition: transform 0.5s ease;
+}
+.faq_title {
+  text-align: left;
+  font-size: 16px;
+  width: 77%;
+}
+.faq_case {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.accordion-button:not(.collapsed)::afte {
+  transform: rotate(180deg);
+}
+
+.form {
+  width: 100%;
+  height: 387px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 25.8px 0px rgba(0, 0, 0, 0.1), inset -50px 4px 50px 0px rgba(255, 255, 255, 0.69);
+  -webkit-backdrop-filter: blur(60px);
+          backdrop-filter: blur(60px);
+  background: rgba(255, 255, 255, 0.8);
+  background-image: url(assets/image\ 17.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 30px 30px 30px 100px;
+  margin-bottom: 80px;
+}
+.form .hero_button button {
+  padding: 12px 60px;
+}
+.form .form_input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form .form_input input {
+  border: 1px solid rgb(149, 150, 150);
+  border-radius: 10px;
+  height: 40px;
+  padding-left: 10px;
+}
+.form form {
+  width: 35%;
 }
